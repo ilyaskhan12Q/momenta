@@ -6,11 +6,11 @@ const config: Config = {
   tagline: 'Your feelings, on a page. Single Source of Truth & Architecture Guide.',
   favicon: 'img/favicon.ico',
 
-  url: 'https://momenta-org.github.io',
-  baseUrl: '/',
+  url: 'https://ilyaskhan12Q.github.io',
+  baseUrl: process.env.NODE_ENV === 'production' ? '/momenta/' : '/',
 
-  organizationName: 'momenta-org',
-  projectName: 'momenta-docs',
+  organizationName: 'ilyaskhan12Q',
+  projectName: 'momenta',
 
   onBrokenLinks: 'warn',
 
