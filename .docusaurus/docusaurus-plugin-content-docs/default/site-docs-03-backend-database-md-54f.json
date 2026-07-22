@@ -1,0 +1,30 @@
+{
+  "id": "BACKEND/Database",
+  "title": "Database Architecture & Schema Specification",
+  "description": "---",
+  "source": "@site/docs/03_BACKEND/Database.md",
+  "sourceDirName": "03_BACKEND",
+  "slug": "/BACKEND/Database",
+  "permalink": "/BACKEND/Database",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/03_BACKEND/Database.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "Database",
+    "title": "Database Architecture & Schema Specification",
+    "sidebar_label": "Database & Schema"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Analytics & Audit",
+    "permalink": "/BACKEND/Features/AnalyticsAndAudit"
+  },
+  "next": {
+    "title": "Storage Architecture",
+    "permalink": "/BACKEND/Storage"
+  }
+}

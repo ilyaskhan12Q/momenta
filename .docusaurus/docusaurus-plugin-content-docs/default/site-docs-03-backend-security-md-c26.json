@@ -1,0 +1,30 @@
+{
+  "id": "BACKEND/Security",
+  "title": "Security, Privacy & Compliance Architecture",
+  "description": "---",
+  "source": "@site/docs/03_BACKEND/Security.md",
+  "sourceDirName": "03_BACKEND",
+  "slug": "/BACKEND/Security",
+  "permalink": "/BACKEND/Security",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/03_BACKEND/Security.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "Security",
+    "title": "Security, Privacy & Compliance Architecture",
+    "sidebar_label": "Security Architecture"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "API Reference",
+    "permalink": "/BACKEND/API"
+  },
+  "next": {
+    "title": "Business Rules",
+    "permalink": "/BACKEND/BusinessRules"
+  }
+}

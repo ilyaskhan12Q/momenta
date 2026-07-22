@@ -1,0 +1,26 @@
+{
+  "id": "APPENDIX/FAQ",
+  "title": "Frequently Asked Questions (FAQ)",
+  "description": "---",
+  "source": "@site/docs/08_APPENDIX/FAQ.md",
+  "sourceDirName": "08_APPENDIX",
+  "slug": "/APPENDIX/FAQ",
+  "permalink": "/APPENDIX/FAQ",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/08_APPENDIX/FAQ.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "FAQ",
+    "title": "Frequently Asked Questions (FAQ)",
+    "sidebar_label": "Architecture FAQ"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Technical Glossary",
+    "permalink": "/APPENDIX/Glossary"
+  }
+}

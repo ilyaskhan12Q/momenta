@@ -1,0 +1,30 @@
+{
+  "id": "ARCHITECTURE/EngineeringPrinciples",
+  "title": "Engineering Principles & Architectural Mandates",
+  "description": "---",
+  "source": "@site/docs/02_ARCHITECTURE/EngineeringPrinciples.md",
+  "sourceDirName": "02_ARCHITECTURE",
+  "slug": "/ARCHITECTURE/EngineeringPrinciples",
+  "permalink": "/ARCHITECTURE/EngineeringPrinciples",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/02_ARCHITECTURE/EngineeringPrinciples.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "EngineeringPrinciples",
+    "title": "Engineering Principles & Architectural Mandates",
+    "sidebar_label": "Engineering Principles"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "User Journeys",
+    "permalink": "/PRODUCT/UserJourneys"
+  },
+  "next": {
+    "title": "System Architecture",
+    "permalink": "/ARCHITECTURE/SystemArchitecture"
+  }
+}

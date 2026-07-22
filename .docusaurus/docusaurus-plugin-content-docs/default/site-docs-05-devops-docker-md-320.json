@@ -1,0 +1,30 @@
+{
+  "id": "DEVOPS/Docker",
+  "title": "Docker Containerization Architecture",
+  "description": "---",
+  "source": "@site/docs/05_DEVOPS/Docker.md",
+  "sourceDirName": "05_DEVOPS",
+  "slug": "/DEVOPS/Docker",
+  "permalink": "/DEVOPS/Docker",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/05_DEVOPS/Docker.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "Docker",
+    "title": "Docker Containerization Architecture",
+    "sidebar_label": "Docker & Containers"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Animation Bible",
+    "permalink": "/DESIGN/AnimationBible"
+  },
+  "next": {
+    "title": "GitHub Actions & CI/CD",
+    "permalink": "/DEVOPS/GitHubActions"
+  }
+}

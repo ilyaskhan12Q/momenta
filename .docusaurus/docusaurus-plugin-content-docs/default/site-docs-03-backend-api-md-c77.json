@@ -1,0 +1,30 @@
+{
+  "id": "BACKEND/API",
+  "title": "REST API Reference & Specification",
+  "description": "---",
+  "source": "@site/docs/03_BACKEND/API.md",
+  "sourceDirName": "03_BACKEND",
+  "slug": "/BACKEND/API",
+  "permalink": "/BACKEND/API",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/03_BACKEND/API.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "API",
+    "title": "REST API Reference & Specification",
+    "sidebar_label": "API Reference"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Storage Architecture",
+    "permalink": "/BACKEND/Storage"
+  },
+  "next": {
+    "title": "Security Architecture",
+    "permalink": "/BACKEND/Security"
+  }
+}

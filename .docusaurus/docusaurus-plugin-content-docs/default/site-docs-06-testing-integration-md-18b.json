@@ -1,0 +1,30 @@
+{
+  "id": "TESTING/Integration",
+  "title": "Integration Testing Strategy & API Suites",
+  "description": "---",
+  "source": "@site/docs/06_TESTING/Integration.md",
+  "sourceDirName": "06_TESTING",
+  "slug": "/TESTING/Integration",
+  "permalink": "/TESTING/Integration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/06_TESTING/Integration.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "Integration",
+    "title": "Integration Testing Strategy & API Suites",
+    "sidebar_label": "Integration Testing"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Unit Testing",
+    "permalink": "/TESTING/Unit"
+  },
+  "next": {
+    "title": "E2E & Visual Testing",
+    "permalink": "/TESTING/E2E"
+  }
+}

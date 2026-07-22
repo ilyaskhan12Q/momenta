@@ -1,0 +1,30 @@
+{
+  "id": "BACKEND/Features/RecipientExperience",
+  "title": "Feature Spec — Recipient Experience & Gesture Engine",
+  "description": "---",
+  "source": "@site/docs/03_BACKEND/Features/RecipientExperience.md",
+  "sourceDirName": "03_BACKEND/Features",
+  "slug": "/BACKEND/Features/RecipientExperience",
+  "permalink": "/BACKEND/Features/RecipientExperience",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/03_BACKEND/Features/RecipientExperience.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "RecipientExperience",
+    "title": "Feature Spec — Recipient Experience & Gesture Engine",
+    "sidebar_label": "Recipient Experience"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Story Generation",
+    "permalink": "/BACKEND/Features/StoryGeneration"
+  },
+  "next": {
+    "title": "Media Processing",
+    "permalink": "/BACKEND/Features/MediaProcessing"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "BACKEND/BusinessRules",
+  "title": "System Business Rules Registry",
+  "description": "---",
+  "source": "@site/docs/03_BACKEND/BusinessRules.md",
+  "sourceDirName": "03_BACKEND",
+  "slug": "/BACKEND/BusinessRules",
+  "permalink": "/BACKEND/BusinessRules",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/03_BACKEND/BusinessRules.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "BusinessRules",
+    "title": "System Business Rules Registry",
+    "sidebar_label": "Business Rules"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Security Architecture",
+    "permalink": "/BACKEND/Security"
+  },
+  "next": {
+    "title": "Emotion Engine",
+    "permalink": "/DESIGN/EmotionEngine"
+  }
+}

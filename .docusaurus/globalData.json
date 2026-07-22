@@ -1,0 +1,213 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "PRODUCT/Vision",
+          "docs": [
+            {
+              "id": "APPENDIX/ADRs",
+              "path": "/APPENDIX/ADRs",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "APPENDIX/FAQ",
+              "path": "/APPENDIX/FAQ",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "APPENDIX/Glossary",
+              "path": "/APPENDIX/Glossary",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ARCHITECTURE/BackendArchitecture",
+              "path": "/ARCHITECTURE/BackendArchitecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ARCHITECTURE/DomainModel",
+              "path": "/ARCHITECTURE/DomainModel",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ARCHITECTURE/EngineeringPrinciples",
+              "path": "/ARCHITECTURE/EngineeringPrinciples",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ARCHITECTURE/FrontendArchitecture",
+              "path": "/ARCHITECTURE/FrontendArchitecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ARCHITECTURE/SystemArchitecture",
+              "path": "/ARCHITECTURE/SystemArchitecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "BACKEND/API",
+              "path": "/BACKEND/API",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "BACKEND/BusinessRules",
+              "path": "/BACKEND/BusinessRules",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "BACKEND/Database",
+              "path": "/BACKEND/Database",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "BACKEND/Features/AnalyticsAndAudit",
+              "path": "/BACKEND/Features/AnalyticsAndAudit",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "BACKEND/Features/MediaProcessing",
+              "path": "/BACKEND/Features/MediaProcessing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "BACKEND/Features/MessageCreation",
+              "path": "/BACKEND/Features/MessageCreation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "BACKEND/Features/RecipientExperience",
+              "path": "/BACKEND/Features/RecipientExperience",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "BACKEND/Features/StoryGeneration",
+              "path": "/BACKEND/Features/StoryGeneration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "BACKEND/Security",
+              "path": "/BACKEND/Security",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "BACKEND/Storage",
+              "path": "/BACKEND/Storage",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "DESIGN/AnimationBible",
+              "path": "/DESIGN/AnimationBible",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "DESIGN/DesignSystem",
+              "path": "/DESIGN/DesignSystem",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "DESIGN/EmotionEngine",
+              "path": "/DESIGN/EmotionEngine",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "DESIGN/StoryEngine",
+              "path": "/DESIGN/StoryEngine",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "DEVOPS/Deployment",
+              "path": "/DEVOPS/Deployment",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "DEVOPS/Docker",
+              "path": "/DEVOPS/Docker",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "DEVOPS/GitHubActions",
+              "path": "/DEVOPS/GitHubActions",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "DEVOPS/Monitoring",
+              "path": "/DEVOPS/Monitoring",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "PRODUCT/Personas",
+              "path": "/PRODUCT/Personas",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "PRODUCT/PRD",
+              "path": "/PRODUCT/PRD",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "PRODUCT/UserJourneys",
+              "path": "/PRODUCT/UserJourneys",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "PRODUCT/Vision",
+              "path": "/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ROADMAP/FutureIdeas",
+              "path": "/ROADMAP/FutureIdeas",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ROADMAP/MVP",
+              "path": "/ROADMAP/MVP",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ROADMAP/V2",
+              "path": "/ROADMAP/V2",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "TESTING/E2E",
+              "path": "/TESTING/E2E",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "TESTING/Integration",
+              "path": "/TESTING/Integration",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "TESTING/Security",
+              "path": "/TESTING/Security",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "TESTING/Unit",
+              "path": "/TESTING/Unit",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/",
+                "label": "PRODUCT/Vision"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

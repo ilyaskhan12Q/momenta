@@ -1,0 +1,30 @@
+{
+  "id": "PRODUCT/UserJourneys",
+  "title": "User Journeys & End-to-End Workflows",
+  "description": "---",
+  "source": "@site/docs/01_PRODUCT/UserJourneys.md",
+  "sourceDirName": "01_PRODUCT",
+  "slug": "/PRODUCT/UserJourneys",
+  "permalink": "/PRODUCT/UserJourneys",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/01_PRODUCT/UserJourneys.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "UserJourneys",
+    "title": "User Journeys & End-to-End Workflows",
+    "sidebar_label": "User Journeys"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "User Personas",
+    "permalink": "/PRODUCT/Personas"
+  },
+  "next": {
+    "title": "Engineering Principles",
+    "permalink": "/ARCHITECTURE/EngineeringPrinciples"
+  }
+}
