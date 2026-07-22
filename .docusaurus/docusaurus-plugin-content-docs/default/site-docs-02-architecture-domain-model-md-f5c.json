@@ -1,0 +1,30 @@
+{
+  "id": "ARCHITECTURE/DomainModel",
+  "title": "Business Domain & Domain Model",
+  "description": "---",
+  "source": "@site/docs/02_ARCHITECTURE/DomainModel.md",
+  "sourceDirName": "02_ARCHITECTURE",
+  "slug": "/ARCHITECTURE/DomainModel",
+  "permalink": "/ARCHITECTURE/DomainModel",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/02_ARCHITECTURE/DomainModel.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "DomainModel",
+    "title": "Business Domain & Domain Model",
+    "sidebar_label": "Domain Model"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Frontend Architecture",
+    "permalink": "/ARCHITECTURE/FrontendArchitecture"
+  },
+  "next": {
+    "title": "Message Creation",
+    "permalink": "/BACKEND/Features/MessageCreation"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "DESIGN/DesignSystem",
+  "title": "Design System & Visual Tokens",
+  "description": "---",
+  "source": "@site/docs/04_DESIGN/DesignSystem.md",
+  "sourceDirName": "04_DESIGN",
+  "slug": "/DESIGN/DesignSystem",
+  "permalink": "/DESIGN/DesignSystem",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/04_DESIGN/DesignSystem.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "DesignSystem",
+    "title": "Design System & Visual Tokens",
+    "sidebar_label": "Design System"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Story Engine",
+    "permalink": "/DESIGN/StoryEngine"
+  },
+  "next": {
+    "title": "Animation Bible",
+    "permalink": "/DESIGN/AnimationBible"
+  }
+}

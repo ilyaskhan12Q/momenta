@@ -1,0 +1,30 @@
+{
+  "id": "PRODUCT/PRD",
+  "title": "Product Requirements Document (PRD)",
+  "description": "---",
+  "source": "@site/docs/01_PRODUCT/PRD.md",
+  "sourceDirName": "01_PRODUCT",
+  "slug": "/PRODUCT/PRD",
+  "permalink": "/PRODUCT/PRD",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/01_PRODUCT/PRD.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "PRD",
+    "title": "Product Requirements Document (PRD)",
+    "sidebar_label": "PRD & Requirements"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Vision & Philosophy",
+    "permalink": "/"
+  },
+  "next": {
+    "title": "User Personas",
+    "permalink": "/PRODUCT/Personas"
+  }
+}

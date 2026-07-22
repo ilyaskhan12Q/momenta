@@ -1,0 +1,30 @@
+{
+  "id": "DEVOPS/Monitoring",
+  "title": "Monitoring, Observability & Telemetry Architecture",
+  "description": "---",
+  "source": "@site/docs/05_DEVOPS/Monitoring.md",
+  "sourceDirName": "05_DEVOPS",
+  "slug": "/DEVOPS/Monitoring",
+  "permalink": "/DEVOPS/Monitoring",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/05_DEVOPS/Monitoring.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "Monitoring",
+    "title": "Monitoring, Observability & Telemetry Architecture",
+    "sidebar_label": "Monitoring & Observability"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Deployment Strategy",
+    "permalink": "/DEVOPS/Deployment"
+  },
+  "next": {
+    "title": "Unit Testing",
+    "permalink": "/TESTING/Unit"
+  }
+}

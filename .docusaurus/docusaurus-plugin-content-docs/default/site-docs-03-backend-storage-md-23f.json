@@ -1,0 +1,30 @@
+{
+  "id": "BACKEND/Storage",
+  "title": "Cloud Storage & Blob Architecture",
+  "description": "---",
+  "source": "@site/docs/03_BACKEND/Storage.md",
+  "sourceDirName": "03_BACKEND",
+  "slug": "/BACKEND/Storage",
+  "permalink": "/BACKEND/Storage",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/03_BACKEND/Storage.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "Storage",
+    "title": "Cloud Storage & Blob Architecture",
+    "sidebar_label": "Storage Architecture"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Database & Schema",
+    "permalink": "/BACKEND/Database"
+  },
+  "next": {
+    "title": "API Reference",
+    "permalink": "/BACKEND/API"
+  }
+}

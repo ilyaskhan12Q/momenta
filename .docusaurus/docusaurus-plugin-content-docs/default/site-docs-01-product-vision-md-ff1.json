@@ -1,0 +1,27 @@
+{
+  "id": "PRODUCT/Vision",
+  "title": "Product Vision & Core Philosophy",
+  "description": "Tagline: \"Your feelings, on a page.\"",
+  "source": "@site/docs/01_PRODUCT/Vision.md",
+  "sourceDirName": "01_PRODUCT",
+  "slug": "/",
+  "permalink": "/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/01_PRODUCT/Vision.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "Vision",
+    "title": "Product Vision & Core Philosophy",
+    "sidebar_label": "Vision & Philosophy",
+    "slug": "/"
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "PRD & Requirements",
+    "permalink": "/PRODUCT/PRD"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ARCHITECTURE/FrontendArchitecture",
+  "title": "Frontend Architecture & Client Engineering",
+  "description": "---",
+  "source": "@site/docs/02_ARCHITECTURE/FrontendArchitecture.md",
+  "sourceDirName": "02_ARCHITECTURE",
+  "slug": "/ARCHITECTURE/FrontendArchitecture",
+  "permalink": "/ARCHITECTURE/FrontendArchitecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/02_ARCHITECTURE/FrontendArchitecture.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "FrontendArchitecture",
+    "title": "Frontend Architecture & Client Engineering",
+    "sidebar_label": "Frontend Architecture"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Backend Architecture",
+    "permalink": "/ARCHITECTURE/BackendArchitecture"
+  },
+  "next": {
+    "title": "Domain Model",
+    "permalink": "/ARCHITECTURE/DomainModel"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "APPENDIX/Glossary",
+  "title": "Technical & Domain Glossary",
+  "description": "---",
+  "source": "@site/docs/08_APPENDIX/Glossary.md",
+  "sourceDirName": "08_APPENDIX",
+  "slug": "/APPENDIX/Glossary",
+  "permalink": "/APPENDIX/Glossary",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/08_APPENDIX/Glossary.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "Glossary",
+    "title": "Technical & Domain Glossary",
+    "sidebar_label": "Technical Glossary"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ADRs (Decision Records)",
+    "permalink": "/APPENDIX/ADRs"
+  },
+  "next": {
+    "title": "Architecture FAQ",
+    "permalink": "/APPENDIX/FAQ"
+  }
+}

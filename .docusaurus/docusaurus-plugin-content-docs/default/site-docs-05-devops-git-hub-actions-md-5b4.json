@@ -1,0 +1,30 @@
+{
+  "id": "DEVOPS/GitHubActions",
+  "title": "CI/CD Pipeline & GitHub Actions Automation",
+  "description": "---",
+  "source": "@site/docs/05_DEVOPS/GitHubActions.md",
+  "sourceDirName": "05_DEVOPS",
+  "slug": "/DEVOPS/GitHubActions",
+  "permalink": "/DEVOPS/GitHubActions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/05_DEVOPS/GitHubActions.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "GitHubActions",
+    "title": "CI/CD Pipeline & GitHub Actions Automation",
+    "sidebar_label": "GitHub Actions & CI/CD"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Docker & Containers",
+    "permalink": "/DEVOPS/Docker"
+  },
+  "next": {
+    "title": "Deployment Strategy",
+    "permalink": "/DEVOPS/Deployment"
+  }
+}

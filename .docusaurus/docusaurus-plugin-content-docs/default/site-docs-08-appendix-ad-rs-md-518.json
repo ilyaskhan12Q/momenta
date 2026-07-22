@@ -1,0 +1,30 @@
+{
+  "id": "APPENDIX/ADRs",
+  "title": "Architecture Decision Records (ADRs)",
+  "description": "---",
+  "source": "@site/docs/08_APPENDIX/ADRs.md",
+  "sourceDirName": "08_APPENDIX",
+  "slug": "/APPENDIX/ADRs",
+  "permalink": "/APPENDIX/ADRs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/08_APPENDIX/ADRs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "ADRs",
+    "title": "Architecture Decision Records (ADRs)",
+    "sidebar_label": "ADRs (Decision Records)"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Future Ideas",
+    "permalink": "/ROADMAP/FutureIdeas"
+  },
+  "next": {
+    "title": "Technical Glossary",
+    "permalink": "/APPENDIX/Glossary"
+  }
+}

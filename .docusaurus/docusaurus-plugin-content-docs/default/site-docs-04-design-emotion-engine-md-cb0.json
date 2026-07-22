@@ -1,0 +1,30 @@
+{
+  "id": "DESIGN/EmotionEngine",
+  "title": "Emotion Engine Architecture & Sentiment Mapping",
+  "description": "---",
+  "source": "@site/docs/04_DESIGN/EmotionEngine.md",
+  "sourceDirName": "04_DESIGN",
+  "slug": "/DESIGN/EmotionEngine",
+  "permalink": "/DESIGN/EmotionEngine",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/04_DESIGN/EmotionEngine.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "EmotionEngine",
+    "title": "Emotion Engine Architecture & Sentiment Mapping",
+    "sidebar_label": "Emotion Engine"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Business Rules",
+    "permalink": "/BACKEND/BusinessRules"
+  },
+  "next": {
+    "title": "Story Engine",
+    "permalink": "/DESIGN/StoryEngine"
+  }
+}

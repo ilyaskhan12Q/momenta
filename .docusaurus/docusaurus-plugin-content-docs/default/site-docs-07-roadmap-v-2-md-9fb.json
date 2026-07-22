@@ -1,0 +1,30 @@
+{
+  "id": "ROADMAP/V2",
+  "title": "Product Roadmap — Version 2.0 Features",
+  "description": "---",
+  "source": "@site/docs/07_ROADMAP/V2.md",
+  "sourceDirName": "07_ROADMAP",
+  "slug": "/ROADMAP/V2",
+  "permalink": "/ROADMAP/V2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/07_ROADMAP/V2.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "V2",
+    "title": "Product Roadmap — Version 2.0 Features",
+    "sidebar_label": "Version 2.0"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "MVP Scope",
+    "permalink": "/ROADMAP/MVP"
+  },
+  "next": {
+    "title": "Future Ideas",
+    "permalink": "/ROADMAP/FutureIdeas"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "TESTING/E2E",
+  "title": "End-to-End (E2E) & Visual Regression Testing",
+  "description": "---",
+  "source": "@site/docs/06_TESTING/E2E.md",
+  "sourceDirName": "06_TESTING",
+  "slug": "/TESTING/E2E",
+  "permalink": "/TESTING/E2E",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/06_TESTING/E2E.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "E2E",
+    "title": "End-to-End (E2E) & Visual Regression Testing",
+    "sidebar_label": "E2E & Visual Testing"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Integration Testing",
+    "permalink": "/TESTING/Integration"
+  },
+  "next": {
+    "title": "Security & Load Testing",
+    "permalink": "/TESTING/Security"
+  }
+}

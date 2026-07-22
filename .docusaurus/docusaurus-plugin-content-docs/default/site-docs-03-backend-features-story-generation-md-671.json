@@ -1,0 +1,30 @@
+{
+  "id": "BACKEND/Features/StoryGeneration",
+  "title": "Feature Spec — Story Generation & Manifest Compilation",
+  "description": "---",
+  "source": "@site/docs/03_BACKEND/Features/StoryGeneration.md",
+  "sourceDirName": "03_BACKEND/Features",
+  "slug": "/BACKEND/Features/StoryGeneration",
+  "permalink": "/BACKEND/Features/StoryGeneration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/03_BACKEND/Features/StoryGeneration.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "StoryGeneration",
+    "title": "Feature Spec — Story Generation & Manifest Compilation",
+    "sidebar_label": "Story Generation"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Message Creation",
+    "permalink": "/BACKEND/Features/MessageCreation"
+  },
+  "next": {
+    "title": "Recipient Experience",
+    "permalink": "/BACKEND/Features/RecipientExperience"
+  }
+}

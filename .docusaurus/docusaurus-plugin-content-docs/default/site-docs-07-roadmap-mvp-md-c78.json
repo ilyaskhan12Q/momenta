@@ -1,0 +1,30 @@
+{
+  "id": "ROADMAP/MVP",
+  "title": "Product Roadmap — MVP Specification",
+  "description": "---",
+  "source": "@site/docs/07_ROADMAP/MVP.md",
+  "sourceDirName": "07_ROADMAP",
+  "slug": "/ROADMAP/MVP",
+  "permalink": "/ROADMAP/MVP",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/07_ROADMAP/MVP.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "MVP",
+    "title": "Product Roadmap — MVP Specification",
+    "sidebar_label": "MVP Scope"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Security & Load Testing",
+    "permalink": "/TESTING/Security"
+  },
+  "next": {
+    "title": "Version 2.0",
+    "permalink": "/ROADMAP/V2"
+  }
+}

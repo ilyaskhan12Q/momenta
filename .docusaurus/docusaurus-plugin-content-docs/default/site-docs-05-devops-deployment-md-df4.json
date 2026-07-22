@@ -1,0 +1,30 @@
+{
+  "id": "DEVOPS/Deployment",
+  "title": "Deployment Architecture (GitHub Pages & Vercel)",
+  "description": "---",
+  "source": "@site/docs/05_DEVOPS/Deployment.md",
+  "sourceDirName": "05_DEVOPS",
+  "slug": "/DEVOPS/Deployment",
+  "permalink": "/DEVOPS/Deployment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/05_DEVOPS/Deployment.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "Deployment",
+    "title": "Deployment Architecture (GitHub Pages & Vercel)",
+    "sidebar_label": "Deployment Strategy"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "GitHub Actions & CI/CD",
+    "permalink": "/DEVOPS/GitHubActions"
+  },
+  "next": {
+    "title": "Monitoring & Observability",
+    "permalink": "/DEVOPS/Monitoring"
+  }
+}

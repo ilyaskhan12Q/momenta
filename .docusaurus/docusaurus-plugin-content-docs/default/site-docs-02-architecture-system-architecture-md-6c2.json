@@ -1,0 +1,30 @@
+{
+  "id": "ARCHITECTURE/SystemArchitecture",
+  "title": "Overall System Architecture",
+  "description": "---",
+  "source": "@site/docs/02_ARCHITECTURE/SystemArchitecture.md",
+  "sourceDirName": "02_ARCHITECTURE",
+  "slug": "/ARCHITECTURE/SystemArchitecture",
+  "permalink": "/ARCHITECTURE/SystemArchitecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/02_ARCHITECTURE/SystemArchitecture.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "SystemArchitecture",
+    "title": "Overall System Architecture",
+    "sidebar_label": "System Architecture"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Engineering Principles",
+    "permalink": "/ARCHITECTURE/EngineeringPrinciples"
+  },
+  "next": {
+    "title": "Backend Architecture",
+    "permalink": "/ARCHITECTURE/BackendArchitecture"
+  }
+}

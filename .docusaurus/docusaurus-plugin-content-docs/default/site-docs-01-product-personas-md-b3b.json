@@ -1,0 +1,30 @@
+{
+  "id": "PRODUCT/Personas",
+  "title": "User Personas & Archetypes",
+  "description": "---",
+  "source": "@site/docs/01_PRODUCT/Personas.md",
+  "sourceDirName": "01_PRODUCT",
+  "slug": "/PRODUCT/Personas",
+  "permalink": "/PRODUCT/Personas",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/01_PRODUCT/Personas.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "Personas",
+    "title": "User Personas & Archetypes",
+    "sidebar_label": "User Personas"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "PRD & Requirements",
+    "permalink": "/PRODUCT/PRD"
+  },
+  "next": {
+    "title": "User Journeys",
+    "permalink": "/PRODUCT/UserJourneys"
+  }
+}

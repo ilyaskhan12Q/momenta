@@ -1,0 +1,30 @@
+{
+  "id": "ROADMAP/FutureIdeas",
+  "title": "Future Ideas & Blue-Sky Explorations",
+  "description": "---",
+  "source": "@site/docs/07_ROADMAP/FutureIdeas.md",
+  "sourceDirName": "07_ROADMAP",
+  "slug": "/ROADMAP/FutureIdeas",
+  "permalink": "/ROADMAP/FutureIdeas",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/07_ROADMAP/FutureIdeas.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "FutureIdeas",
+    "title": "Future Ideas & Blue-Sky Explorations",
+    "sidebar_label": "Future Ideas"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Version 2.0",
+    "permalink": "/ROADMAP/V2"
+  },
+  "next": {
+    "title": "ADRs (Decision Records)",
+    "permalink": "/APPENDIX/ADRs"
+  }
+}

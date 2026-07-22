@@ -1,0 +1,30 @@
+{
+  "id": "BACKEND/Features/MediaProcessing",
+  "title": "Feature Spec — Media Processing & Transcoding Pipeline",
+  "description": "---",
+  "source": "@site/docs/03_BACKEND/Features/MediaProcessing.md",
+  "sourceDirName": "03_BACKEND/Features",
+  "slug": "/BACKEND/Features/MediaProcessing",
+  "permalink": "/BACKEND/Features/MediaProcessing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/03_BACKEND/Features/MediaProcessing.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "MediaProcessing",
+    "title": "Feature Spec — Media Processing & Transcoding Pipeline",
+    "sidebar_label": "Media Processing"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Recipient Experience",
+    "permalink": "/BACKEND/Features/RecipientExperience"
+  },
+  "next": {
+    "title": "Analytics & Audit",
+    "permalink": "/BACKEND/Features/AnalyticsAndAudit"
+  }
+}

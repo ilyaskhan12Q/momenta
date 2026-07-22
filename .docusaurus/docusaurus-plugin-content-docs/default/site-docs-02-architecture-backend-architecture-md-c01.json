@@ -1,0 +1,30 @@
+{
+  "id": "ARCHITECTURE/BackendArchitecture",
+  "title": "Backend Architecture & Service Design",
+  "description": "---",
+  "source": "@site/docs/02_ARCHITECTURE/BackendArchitecture.md",
+  "sourceDirName": "02_ARCHITECTURE",
+  "slug": "/ARCHITECTURE/BackendArchitecture",
+  "permalink": "/ARCHITECTURE/BackendArchitecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/momenta-org/momenta-docs/tree/main/docs/02_ARCHITECTURE/BackendArchitecture.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": null,
+  "lastUpdatedAt": null,
+  "frontMatter": {
+    "id": "BackendArchitecture",
+    "title": "Backend Architecture & Service Design",
+    "sidebar_label": "Backend Architecture"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "System Architecture",
+    "permalink": "/ARCHITECTURE/SystemArchitecture"
+  },
+  "next": {
+    "title": "Frontend Architecture",
+    "permalink": "/ARCHITECTURE/FrontendArchitecture"
+  }
+}
