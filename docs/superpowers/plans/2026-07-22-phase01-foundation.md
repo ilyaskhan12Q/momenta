@@ -118,7 +118,7 @@ git commit -m "feat(config): add environment validation and system constants"
 
 ---
 
-### Task 2: Result<T, E> Monad & Typed Error Hierarchy
+### Task 2: `Result<T, E>` Monad & Typed Error Hierarchy
 
 **Files:**
 - Create: `src/shared/domain/Result.ts`

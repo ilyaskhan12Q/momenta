@@ -81,7 +81,7 @@ src/
 
 ## 3. Core Architectural Mechanisms
 
-### 3.1 Result<T, E> Monad
+### 3.1 `Result<T, E>` Monad
 
 All application use cases and domain methods return a `Result<T, E>` monad rather than throwing untyped exceptions for predictable control flow.
 
