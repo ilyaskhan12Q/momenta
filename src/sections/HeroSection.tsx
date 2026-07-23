@@ -1,10 +1,12 @@
 import { useRef, useEffect, useState } from 'react';
 import { useStarField } from '../hooks/useStarField';
 import { useChromaticScroll } from '../hooks/useChromaticScroll';
+import { CreateExperienceModal } from '../components/CreateExperienceModal';
 
 export default function HeroSection() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -139,8 +141,8 @@ export default function HeroSection() {
         </p>
 
         {/* CTA Button */}
-        <a
-          href="#create"
+        <button
+          onClick={() => setIsModalOpen(true)}
           style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: '18px',
@@ -149,7 +151,8 @@ export default function HeroSection() {
             background: 'var(--secondary)',
             borderRadius: '999px',
             padding: '14px 32px',
-            textDecoration: 'none',
+            border: 'none',
+            cursor: 'pointer',
             transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
             display: 'inline-block',
           }}
@@ -163,7 +166,7 @@ export default function HeroSection() {
           }}
         >
           Create a moment
-        </a>
+        </button>
 
         {/* Atmospheric text */}
         <p
@@ -178,6 +181,8 @@ export default function HeroSection() {
           Some things deserve more than a text message.
         </p>
       </div>
+
+      <CreateExperienceModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

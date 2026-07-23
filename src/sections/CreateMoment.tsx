@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { Heart, Users, Home, User, BookOpen, Briefcase } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { CreateExperienceModal } from '../components/CreateExperienceModal';
 
 const categories = [
   { icon: Heart, label: 'Partner' },
@@ -13,6 +15,9 @@ const categories = [
 export default function CreateMoment() {
   const leftRef = useScrollReveal<HTMLDivElement>({ y: 40, duration: 0.6, stagger: 0.08 });
   const rightRef = useScrollReveal<HTMLDivElement>({ y: 40, duration: 0.6, stagger: 0.08 });
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('PARTNER');
 
   return (
     <section
@@ -77,9 +82,12 @@ export default function CreateMoment() {
           >
             Choose your relationship. Pick an emotion. Write your message. We'll craft a one-of-a-kind experience you can share with a single link.
           </p>
-          <a
+          <button
             data-reveal
-            href="#"
+            onClick={() => {
+              setSelectedCategory('PARTNER');
+              setIsModalOpen(true);
+            }}
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '18px',
@@ -88,7 +96,8 @@ export default function CreateMoment() {
               background: 'var(--secondary)',
               borderRadius: '999px',
               padding: '14px 32px',
-              textDecoration: 'none',
+              border: 'none',
+              cursor: 'pointer',
               transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
               display: 'inline-block',
             }}
@@ -102,7 +111,7 @@ export default function CreateMoment() {
             }}
           >
             Start creating
-          </a>
+          </button>
         </div>
 
         {/* Right Column - Category Cards */}
@@ -120,6 +129,10 @@ export default function CreateMoment() {
               <div
                 key={cat.label}
                 data-reveal
+                onClick={() => {
+                  setSelectedCategory(cat.label.toUpperCase());
+                  setIsModalOpen(true);
+                }}
                 style={{
                   background: 'var(--white)',
                   borderRadius: '20px',
@@ -160,6 +173,12 @@ export default function CreateMoment() {
           })}
         </div>
       </div>
+
+      <CreateExperienceModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        initialRelationship={selectedCategory}
+      />
     </section>
   );
 }
