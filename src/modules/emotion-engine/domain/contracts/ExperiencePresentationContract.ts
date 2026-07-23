@@ -89,3 +89,9 @@ export interface ExperiencePresentationContract {
   audio: AudioTokens;
   gesture: GestureTokens;
 }
+
+export const ExperiencePresentationContract = {};
+export const ShaderTokens = {};
+export const ColorTokens = {};
+export const AudioTokens = {};
+export const GestureTokens = {};

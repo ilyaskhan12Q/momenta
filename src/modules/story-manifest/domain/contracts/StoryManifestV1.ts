@@ -1,4 +1,4 @@
-import { ExperiencePresentationContract } from '../../../emotion-engine/domain/contracts/ExperiencePresentationContract';
+import type { ExperiencePresentationContract } from '../../../emotion-engine/domain/contracts/ExperiencePresentationContract';
 
 export interface ManifestSceneBeat {
   sequenceOrder: number;
@@ -20,3 +20,5 @@ export interface StoryManifestV1 {
   presentation: ExperiencePresentationContract;
   checksum: string;
 }
+
+export const StoryManifestV1 = {};
