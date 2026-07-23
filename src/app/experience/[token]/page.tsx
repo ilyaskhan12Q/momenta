@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { StoryManifestV1 } from '@/modules/story-manifest/domain/contracts/StoryManifestV1';
+import type { StoryManifestV1 } from '@/modules/story-manifest/domain/contracts/StoryManifestV1';
 import { ExperienceSplash } from '@/modules/recipient-renderer/presentation/components/ExperienceSplash';
 import { ShaderBackgroundCanvas } from '@/modules/recipient-renderer/infrastructure/webgl/ShaderBackgroundCanvas';
 import { AudioSoundscapeEngine } from '@/modules/recipient-renderer/infrastructure/audio/AudioSoundscapeEngine';
@@ -18,21 +18,34 @@ export default function ExperiencePage({ params }: { params: Promise<{ token: st
   const audioEngineRef = useRef<AudioSoundscapeEngine | null>(null);
 
   useEffect(() => {
-    params.then((p) => {
+    params.then(async (p) => {
       setToken(p.token);
-      fetch(`/api/v1/manifests/${p.token}`)
-        .then((res) => {
-          if (!res.ok) throw new Error('Experience not found or expired');
-          return res.json();
-        })
-        .then((json) => {
-          setManifest(json.data);
-          setState('UNOPENED');
-        })
-        .catch((err) => {
-          setErrorMsg((err as Error).message);
-          setState('ERROR');
-        });
+      let loadedManifest: StoryManifestV1 | null = null;
+
+      try {
+        const res = await fetch(`/api/v1/manifests/${p.token}`);
+        if (res.ok) {
+          const json = await res.json();
+          if (json && json.data) {
+            loadedManifest = json.data;
+          }
+        }
+      } catch {
+        // Fetch failed or non-JSON response
+      }
+
+      if (!loadedManifest) {
+        const { localExperienceService } = await import('@/modules/story-manifest/infrastructure/client/LocalExperienceService');
+        loadedManifest = localExperienceService.getManifest(p.token);
+      }
+
+      if (loadedManifest) {
+        setManifest(loadedManifest);
+        setState('UNOPENED');
+      } else {
+        setErrorMsg('Experience link not found or expired');
+        setState('ERROR');
+      }
     });
   }, [params]);
 

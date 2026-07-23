@@ -30,47 +30,63 @@ export const CreateExperienceModal: React.FC<CreateExperienceModalProps> = ({
     setError('');
 
     try {
-      // 1. Create Experience Draft
-      const expRes = await fetch('/api/v1/experiences', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          senderId: 'user-demo',
-          title: `${senderName || 'Anonymous'}'s ${occasion} Moment`,
-          relationship,
-          occasion,
-        }),
-      });
+      let token = '';
 
-      const expData = await expRes.json();
-      if (!expRes.ok) throw new Error(expData.message || 'Failed to create experience draft');
-      const experienceId = expData.data.id;
-
-      // 2. Append Scenes
-      const scenesToAppend = [
-        { sequenceOrder: 1, durationMs: 6000, transition: 'FADE_SLIDE', beats: [scene1 || 'Every memory with you shines brighter than stars.'] },
-        { sequenceOrder: 2, durationMs: 6000, transition: 'FADE_SLIDE', beats: [scene2 || 'Here is to a lifetime of shared moments and endless love.'] },
-      ];
-
-      for (const scene of scenesToAppend) {
-        await fetch(`/api/v1/experiences/${experienceId}/scenes`, {
+      // Try server API first
+      try {
+        const expRes = await fetch('/api/v1/experiences', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(scene),
+          body: JSON.stringify({
+            senderId: 'user-demo',
+            title: `${senderName || 'Anonymous'}'s ${occasion} Moment`,
+            relationship,
+            occasion,
+          }),
         });
+
+        if (expRes.ok) {
+          const expData = await expRes.json();
+          const experienceId = expData.data.id;
+
+          const scenesToAppend = [
+            { sequenceOrder: 1, durationMs: 6000, transition: 'FADE_SLIDE', beats: [scene1 || 'Every memory with you shines brighter than stars.'] },
+            { sequenceOrder: 2, durationMs: 6000, transition: 'FADE_SLIDE', beats: [scene2 || 'Here is to a lifetime of shared moments and endless love.'] },
+          ];
+
+          for (const scene of scenesToAppend) {
+            await fetch(`/api/v1/experiences/${experienceId}/scenes`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(scene),
+            });
+          }
+
+          const pubRes = await fetch(`/api/v1/experiences/${experienceId}/publish`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ senderId: 'user-demo' }),
+          });
+
+          if (pubRes.ok) {
+            const pubData = await pubRes.json();
+            token = pubData.data.accessToken?.value || pubData.data.accessToken;
+          }
+        }
+      } catch {
+        // Server endpoint unavailable, fallback to local engine
       }
 
-      // 3. Publish Experience
-      const pubRes = await fetch(`/api/v1/experiences/${experienceId}/publish`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ senderId: 'user-demo' }),
-      });
+      // Fallback to local client engine if token not obtained from server
+      if (!token) {
+        const { localExperienceService } = await import('../modules/story-manifest/infrastructure/client/LocalExperienceService');
+        const expId = localExperienceService.createDraft('user-demo', `${senderName || 'Anonymous'}'s ${occasion} Moment`, relationship, occasion);
+        localExperienceService.appendScene(expId, 1, 6000, 'FADE_SLIDE', [scene1 || 'Every memory with you shines brighter than stars.']);
+        localExperienceService.appendScene(expId, 2, 6000, 'FADE_SLIDE', [scene2 || 'Here is to a lifetime of shared moments and endless love.']);
+        const manifest = await localExperienceService.publish(expId, senderName || 'Anonymous');
+        token = manifest.linkToken;
+      }
 
-      const pubData = await pubRes.json();
-      if (!pubRes.ok) throw new Error(pubData.message || 'Failed to publish experience');
-
-      const token = pubData.data.accessToken?.value || pubData.data.accessToken;
       const fullUrl = `${window.location.origin}/experience/${token}`;
       setGeneratedLink(fullUrl);
     } catch (err) {
