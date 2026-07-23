@@ -74,3 +74,42 @@ Modern web browsers (iOS Safari, Chrome, Edge) block unprompted audio autoplay w
 
 #### Decision Outcome
 Design an atmospheric splash screen featuring an explicit pulsing action trigger button (`"Open Momenta"`). Clicking/tapping this button calls `audioCtx.resume()` within the physical touch event handler, satisfying browser autoplay policies seamlessly.
+
+---
+
+### ADR-004: Experience Aggregate Root & Domain Event Bus Architecture
+
+- **Status**: Accepted
+- **Date**: 2026-07-22
+- **Deciders**: Lead Backend Engineer, System Architect
+
+#### Context & Problem Statement
+The authoring domain model previously treated stories as isolated nodes. To support multi-scene timelines, strict publishing preconditions, and audit trails, the domain model required an aggregate root structure.
+
+#### Decision Outcome
+Chosen Option: Make `Experience` the Aggregate Root with `Story` and `Scene` subdomains. Domain events (`ExperienceCreatedEvent`, `SceneAppendedEvent`, `ExperiencePublishedEvent`, `ExperienceDeletedEvent`) are dispatched asynchronously via `DomainEventBus`.
+
+---
+
+### ADR-005: Modular Emotion Pipeline & Deterministic On-The-Fly ExperiencePresentationContract Generation
+
+- **Status**: Accepted
+- **Date**: 2026-07-23
+- **Deciders**: Lead Backend Engineer, System Architect
+
+#### Context & Problem Statement
+Dynamic sensory presentation tokens (colors, typography, WebGL shaders, WebAudio stems, gestures, animations) need to be synthesized from experience text without storing rigid static blobs in relational database tables.
+
+#### Decision Outcome
+Chosen Option:
+1. `ExperiencePresentationContract` represents the runtime presentation model.
+2. `EmotionPipelineOrchestrator` coordinates stage execution (`LanguageDetectionStage`, `ContextAnalysisStage`, `EmotionScoringStage`, `IntensityResolutionStage`, `PresentationResolutionStage`, `StructuralValidationStage`, `ExperienceValidationStage`).
+3. Pure domain isolation (`src/modules/emotion-engine/domain` has zero Next.js, Supabase, HTTP, or browser dependencies).
+4. Presentation resolution is delegated to dedicated sub-resolvers (`ColorResolver`, `TypographyResolver`, `ShaderResolver`, `AnimationResolver`, `AudioResolver`, `GestureResolver`, `InteractionResolver`, `AccessibilityResolver`) backed by Strategy Registries.
+5. Contracts are generated deterministically on-the-fly using `engineVersion: "1.0.0"` and `themeVersion: "1.0.0"`.
+
+#### Consequences
+- 100% deterministic outputs suitable for snapshot testing.
+- Easily extensible with future AI/LLM analyzers via `IEmotionAnalyzer`.
+- Zero database storage overhead for generated presentation tokens.
+
