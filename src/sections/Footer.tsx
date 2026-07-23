@@ -1,4 +1,4 @@
-import { Instagram, Twitter, Facebook, Youtube, Heart } from 'lucide-react';
+import { Instagram, Facebook, Youtube, Heart, Share2 } from 'lucide-react';
 
 const linkColumns = [
   ['How it works', 'Relationships', 'Emotions', 'Pricing'],
@@ -8,7 +8,7 @@ const linkColumns = [
 
 const socialIcons = [
   { icon: Instagram, label: 'Instagram' },
-  { icon: Twitter, label: 'Twitter' },
+  { icon: Share2, label: 'Twitter' },
   { icon: Facebook, label: 'Facebook' },
   { icon: Youtube, label: 'Youtube' },
 ];
