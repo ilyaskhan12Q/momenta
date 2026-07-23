@@ -5,3 +5,5 @@ export interface IExperienceRepository {
   findByAccessToken(token: string): Promise<Experience | null>;
   save(experience: Experience): Promise<void>;
 }
+
+export const IExperienceRepository = {};

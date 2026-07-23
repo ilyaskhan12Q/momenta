@@ -5,3 +5,5 @@ export interface ILogger {
   debug(message: string, context?: Record<string, unknown>): void;
   child(moduleName: string): ILogger;
 }
+
+export const ILogger = {};

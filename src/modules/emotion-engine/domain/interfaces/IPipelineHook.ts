@@ -1,5 +1,5 @@
-import { EmotionPipelineContext } from './IEmotionPipelineStage';
-import { ExperiencePresentationContract } from '../contracts/ExperiencePresentationContract';
+import type { EmotionPipelineContext } from './IEmotionPipelineStage';
+import type { ExperiencePresentationContract } from '../contracts/ExperiencePresentationContract';
 
 export interface IPipelineHook {
   beforePipeline?(context: EmotionPipelineContext): Promise<void>;
@@ -8,3 +8,5 @@ export interface IPipelineHook {
   beforeValidation?(context: EmotionPipelineContext): Promise<void>;
   afterPipeline?(context: EmotionPipelineContext, contract: ExperiencePresentationContract): Promise<void>;
 }
+
+export const IPipelineHook = {};

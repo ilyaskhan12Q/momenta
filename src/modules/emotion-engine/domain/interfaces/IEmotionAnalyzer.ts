@@ -12,3 +12,6 @@ export interface IEmotionAnalyzer {
   readonly id: string;
   analyze(textBeats: string[], relationship: string, occasion: string): Promise<AnalyzerAnalysisResult>;
 }
+
+export const AnalyzerAnalysisResult = {};
+export const IEmotionAnalyzer = {};
