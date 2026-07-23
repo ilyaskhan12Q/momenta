@@ -134,4 +134,26 @@ When a sender publishes an experience, recipients need to load the full scene ti
 - 100% isolated from primary database traffic spikes.
 - Immutable snapshot isolation guarantees experiences never break even if drafts are modified.
 
+---
+
+### ADR-007: WebGL Fragment Shader Canvas & WebAudio API Synthesizer Architecture
+
+- **Status**: Accepted
+- **Date**: 2026-07-23
+- **Deciders**: Lead Backend Engineer, Staff Frontend Engineer, System Architect
+
+#### Context & Problem Statement
+Rendering dynamic presentation tokens (shaders, audio stems, typography, and gestures) for recipients must deliver a premium, responsive experience without heavy 3D engine bundles (Three.js ~600KB) or autoplay policy rejections.
+
+#### Decision Outcome
+1. **Pure WebGL2 Canvas (`ShaderBackgroundCanvas`)**: Fragment shaders (`WARM_AURORA`, `CELESTIAL_SPARKS`) rendered directly using raw WebGL2 contexts without external 3D engine dependencies.
+2. **WebAudio Autoplay Compliance (`ExperienceSplash` & `AudioSoundscapeEngine`)**: `AudioContext` is created/resumed inside the initial touch/click gesture handler (`"Open Experience"`), ensuring 100% compliance with iOS Safari and Chrome autoplay policies.
+3. **Interactive Gesture Seals**: `WaxSealGesture` provides press-and-hold radial progress feedback before starting scene playback.
+
+#### Consequences
+- Zero external bundle bloat for WebGL/WebAudio.
+- Instant, smooth recipient playback across mobile and desktop viewports.
+- Fully compliant with browser WebAudio autoplay security policies.
+
+
 
