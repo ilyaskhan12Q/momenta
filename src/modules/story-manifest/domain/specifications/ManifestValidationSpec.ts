@@ -1,6 +1,6 @@
 import { Result } from '../../../../shared/domain/Result';
 import { ValidationError } from '../../../../shared/errors/AppError';
-import { StoryManifestV1 } from '../contracts/StoryManifestV1';
+import type { StoryManifestV1 } from '../contracts/StoryManifestV1';
 
 export class ManifestValidationSpec {
   isSatisfiedBy(manifest: StoryManifestV1): Result<boolean, ValidationError> {

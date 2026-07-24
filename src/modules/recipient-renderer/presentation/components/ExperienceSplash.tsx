@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { StoryManifestV1 } from '../../../story-manifest/domain/contracts/StoryManifestV1';
+import type { StoryManifestV1 } from '../../../story-manifest/domain/contracts/StoryManifestV1';
 import { WaxSealGesture } from './WaxSealGesture';
 
 export interface ExperienceSplashProps {

@@ -1,18 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createSupabaseServerClient } from '@/shared/infrastructure/supabase/server';
 import { SupabaseManifestRepository } from '@/modules/story-manifest/infrastructure/repositories/SupabaseManifestRepository';
+import { InMemoryExperienceStore } from '@/shared/infrastructure/repositories/InMemoryExperienceStore';
 import { GetPublishedManifestUseCase } from '@/modules/story-manifest/application/use-cases/GetPublishedManifestUseCase';
 
 export async function GET(
-  _request: NextRequest,
-  { params }: { params: Promise<{ token: string }> }
+  _request: NextRequest | Request,
+  context: { params: Promise<{ token: string }> }
 ) {
   try {
-    const { token } = await params;
-    const supabase = await createSupabaseServerClient();
-    const manifestRepo = new SupabaseManifestRepository(supabase);
-    const useCase = new GetPublishedManifestUseCase(manifestRepo);
+    const { token } = await context.params;
 
+    let manifestRepo;
+    try {
+      const supabase = await createSupabaseServerClient();
+      manifestRepo = new SupabaseManifestRepository(supabase);
+    } catch {
+      manifestRepo = InMemoryExperienceStore.getInstance();
+    }
+
+    const useCase = new GetPublishedManifestUseCase(manifestRepo);
     const result = await useCase.execute(token);
 
     if (result.isFailure) {

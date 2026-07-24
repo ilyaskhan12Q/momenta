@@ -1,6 +1,6 @@
-import { SupabaseClient } from '@supabase/supabase-js';
-import { IManifestRepository } from '../../domain/repositories/IManifestRepository';
-import { StoryManifestV1 } from '../../domain/contracts/StoryManifestV1';
+import type { SupabaseClient } from '@supabase/supabase-js';
+import type { IManifestRepository } from '../../domain/repositories/IManifestRepository';
+import type { StoryManifestV1 } from '../../domain/contracts/StoryManifestV1';
 import { DatabaseError } from '../../../../shared/errors/AppError';
 
 export class SupabaseManifestRepository implements IManifestRepository {

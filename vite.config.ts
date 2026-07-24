@@ -1,11 +1,12 @@
 import path from "path";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+import { apiRoutesPlugin } from "./vite-api-plugin";
 
 // https://vite.dev/config/
 export default defineConfig({
   base: './',
-  plugins: [react()],
+  plugins: [react(), apiRoutesPlugin()],
   server: {
     port: 3000,
   },

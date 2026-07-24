@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createSupabaseServerClient } from '../../../../shared/infrastructure/supabase/server';
 import { SupabaseExperienceRepository } from '../../../../modules/authoring/infrastructure/repositories/SupabaseExperienceRepository';
+import { InMemoryExperienceStore } from '../../../../shared/infrastructure/repositories/InMemoryExperienceStore';
 import { CreateExperienceUseCase } from '../../../../modules/authoring/application/use-cases/CreateExperienceUseCase';
 import { ExperienceMapper } from '../../../../modules/authoring/infrastructure/mappers/ExperienceMapper';
 import { createExperienceSchema } from '../../../../modules/authoring/application/dtos/CreateExperienceDTO';
@@ -21,12 +22,7 @@ export async function POST(request: NextRequest | Request) {
       const supabase = await createSupabaseServerClient();
       repo = new SupabaseExperienceRepository(supabase);
     } catch {
-      // Stub repo for direct unit test calls if Supabase client env missing
-      repo = {
-        save: async () => {},
-        findById: async () => null,
-        findByAccessToken: async () => null,
-      } as any;
+      repo = InMemoryExperienceStore.getInstance();
     }
 
     const useCase = new CreateExperienceUseCase(repo);
@@ -50,14 +46,18 @@ export async function POST(request: NextRequest | Request) {
 
 export async function GET(request: NextRequest | Request) {
   try {
-    const supabase = await createSupabaseServerClient();
-    const { data: expRows, error } = await supabase.from('experiences').select('*').order('created_at', { ascending: false });
+    try {
+      const supabase = await createSupabaseServerClient();
+      const { data: expRows, error } = await supabase.from('experiences').select('*').order('created_at', { ascending: false });
 
-    if (error) {
-      return NextResponse.json({ code: 'DATABASE_ERROR', message: error.message, statusCode: 500 }, { status: 500 });
+      if (error) {
+        return NextResponse.json({ code: 'DATABASE_ERROR', message: error.message, statusCode: 500 }, { status: 500 });
+      }
+
+      return NextResponse.json({ data: expRows || [] }, { status: 200 });
+    } catch {
+      return NextResponse.json({ data: [] }, { status: 200 });
     }
-
-    return NextResponse.json({ data: expRows || [] }, { status: 200 });
   } catch (err: any) {
     return NextResponse.json(
       { code: 'INTERNAL_ERROR', message: err.message || 'An unexpected error occurred', statusCode: 500 },

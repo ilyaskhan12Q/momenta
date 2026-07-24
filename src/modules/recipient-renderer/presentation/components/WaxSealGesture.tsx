@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import { GestureTokens, ColorTokens } from '../../../emotion-engine/domain/contracts/ExperiencePresentationContract';
+import type { GestureTokens, ColorTokens } from '../../../emotion-engine/domain/contracts/ExperiencePresentationContract';
 
 export interface WaxSealGestureProps {
   gesture: GestureTokens;

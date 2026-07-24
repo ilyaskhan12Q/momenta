@@ -65,7 +65,7 @@ export const CreateExperienceModal: React.FC<CreateExperienceModalProps> = ({
           const pubRes = await fetch(`/api/v1/experiences/${experienceId}/publish`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ senderId: 'user-demo' }),
+            body: JSON.stringify({ senderId: 'user-demo', senderDisplayName: senderName || 'Anonymous' }),
           });
 
           if (pubRes.ok) {

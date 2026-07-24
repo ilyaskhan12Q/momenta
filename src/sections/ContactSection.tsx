@@ -53,7 +53,7 @@ export default function ContactSection() {
         </p>
         <a
           data-reveal
-          href="#"
+          href="#create"
           style={{
             fontFamily: "'DM Sans', sans-serif",
             fontSize: '18px',

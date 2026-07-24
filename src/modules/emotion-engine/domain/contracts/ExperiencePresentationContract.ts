@@ -90,8 +90,13 @@ export interface ExperiencePresentationContract {
   gesture: GestureTokens;
 }
 
-export const ExperiencePresentationContract = {};
-export const ShaderTokens = {};
+export const PipelineMetrics = {};
+export const PipelineMetadata = {};
+export const EmotionProfileData = {};
 export const ColorTokens = {};
+export const TypographyTokens = {};
+export const ShaderTokens = {};
+export const AnimationTokens = {};
 export const AudioTokens = {};
 export const GestureTokens = {};
+export const ExperiencePresentationContract = {};

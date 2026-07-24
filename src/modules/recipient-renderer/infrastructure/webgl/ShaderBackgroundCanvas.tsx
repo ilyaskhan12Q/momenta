@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import { ShaderTokens, ColorTokens } from '../../../emotion-engine/domain/contracts/ExperiencePresentationContract';
+import type { ShaderTokens, ColorTokens } from '../../../emotion-engine/domain/contracts/ExperiencePresentationContract';
 
 export interface ShaderBackgroundCanvasProps {
   shader: ShaderTokens;

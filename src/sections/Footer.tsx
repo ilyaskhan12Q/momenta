@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Youtube, Heart, Share2 } from 'lucide-react';
+import { Camera, Share2, Globe, Tv, Heart } from 'lucide-react';
 
 const linkColumns = [
   ['How it works', 'Relationships', 'Emotions', 'Pricing'],
@@ -7,10 +7,10 @@ const linkColumns = [
 ];
 
 const socialIcons = [
-  { icon: Instagram, label: 'Instagram' },
+  { icon: Camera, label: 'Instagram' },
   { icon: Share2, label: 'Twitter' },
-  { icon: Facebook, label: 'Facebook' },
-  { icon: Youtube, label: 'Youtube' },
+  { icon: Globe, label: 'Website' },
+  { icon: Tv, label: 'Youtube' },
 ];
 
 export default function Footer() {

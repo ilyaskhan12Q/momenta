@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ManifestSceneBeat } from '../../../story-manifest/domain/contracts/StoryManifestV1';
-import { ExperiencePresentationContract } from '../../../emotion-engine/domain/contracts/ExperiencePresentationContract';
+import type { ManifestSceneBeat } from '../../../story-manifest/domain/contracts/StoryManifestV1';
+import type { ExperiencePresentationContract } from '../../../emotion-engine/domain/contracts/ExperiencePresentationContract';
 
 export interface SceneTimelineViewerProps {
   scenes: ManifestSceneBeat[];

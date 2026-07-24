@@ -1,11 +1,11 @@
 import { Result } from '../../../../shared/domain/Result';
 import { AppError, NotFoundError, ForbiddenError, ValidationError } from '../../../../shared/errors/AppError';
-import { IExperienceRepository } from '../../../authoring/domain/repositories/IExperienceRepository';
+import type { IExperienceRepository } from '../../../authoring/domain/repositories/IExperienceRepository';
 import { EmotionPipelineOrchestrator } from '../../../emotion-engine/domain/EmotionPipelineOrchestrator';
-import { StoryManifestV1 } from '../../domain/contracts/StoryManifestV1';
+import type { StoryManifestV1 } from '../../domain/contracts/StoryManifestV1';
 import { StoryManifestCompiler } from '../../domain/compiler/StoryManifestCompiler';
 import { ManifestValidationSpec } from '../../domain/specifications/ManifestValidationSpec';
-import { IManifestRepository } from '../../domain/repositories/IManifestRepository';
+import type { IManifestRepository } from '../../domain/repositories/IManifestRepository';
 
 export interface CompileAndPublishManifestDTO {
   experienceId: string;
@@ -32,7 +32,9 @@ export class CompileAndPublishManifestUseCase {
       return Result.fail(new ForbiddenError('You are not authorized to publish this experience'));
     }
 
-    const textBeats = experience.scenes.flatMap((s) => s.beats);
+    const textBeats = experience.scenes.flatMap((s) =>
+      s.beats.map((b: any) => (typeof b === 'string' ? b : b.textPrompt || b.content || ''))
+    );
     if (textBeats.length === 0) {
       return Result.fail(new ValidationError('Cannot publish an experience without scenes or text beats'));
     }

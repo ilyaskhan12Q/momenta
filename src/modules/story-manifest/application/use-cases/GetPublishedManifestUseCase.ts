@@ -1,7 +1,7 @@
 import { Result } from '../../../../shared/domain/Result';
 import { AppError, NotFoundError, ValidationError } from '../../../../shared/errors/AppError';
-import { StoryManifestV1 } from '../../domain/contracts/StoryManifestV1';
-import { IManifestRepository } from '../../domain/repositories/IManifestRepository';
+import type { StoryManifestV1 } from '../../domain/contracts/StoryManifestV1';
+import type { IManifestRepository } from '../../domain/repositories/IManifestRepository';
 
 export class GetPublishedManifestUseCase {
   constructor(private readonly manifestRepo: IManifestRepository) {}
