@@ -1,7 +1,7 @@
 import { Experience } from '../../../authoring/domain/entities/Experience';
 import { RelationshipIntent } from '../../../authoring/domain/value-objects/RelationshipIntent';
 import { OccasionType } from '../../../authoring/domain/value-objects/OccasionType';
-import { Scene } from '../../../authoring/domain/models/Scene';
+import { Scene, type SceneBeat, type SceneTransitionType } from '../../../authoring/domain/models/Scene';
 import { EmotionPipelineOrchestrator } from '../../../emotion-engine/domain/EmotionPipelineOrchestrator';
 import { StoryManifestCompiler } from '../../domain/compiler/StoryManifestCompiler';
 import type { StoryManifestV1 } from '../../domain/contracts/StoryManifestV1';
@@ -32,11 +32,43 @@ export class LocalExperienceService {
     return exp.id;
   }
 
-  appendScene(experienceId: string, sequenceOrder: number, durationMs: number, transition: string, beats: string[]): void {
+  appendScene(
+    experienceId: string,
+    sequenceOrder: number,
+    durationMs: number,
+    transitionStr: string,
+    rawBeats: (string | SceneBeat)[]
+  ): void {
     const exp = experiencesMap.get(experienceId);
     if (!exp) throw new Error(`Experience ${experienceId} not found in local store`);
 
-    const scene = Scene.create({ sequenceOrder, durationMs, transition, beats });
+    const validTransitions: SceneTransitionType[] = ['FADE_UP', 'PARALLAX_SLIDE', 'ZOOM_IN', 'BLUR_REVEAL'];
+    let transition: SceneTransitionType = 'FADE_UP';
+    if (validTransitions.includes(transitionStr as SceneTransitionType)) {
+      transition = transitionStr as SceneTransitionType;
+    } else if (transitionStr === 'FADE_SLIDE') {
+      transition = 'PARALLAX_SLIDE';
+    }
+
+    const beats: SceneBeat[] = rawBeats.map((beat, idx) => {
+      if (typeof beat === 'string') {
+        return {
+          id: `beat_${sequenceOrder}_${idx}`,
+          type: 'PARAGRAPH',
+          content: beat,
+        };
+      }
+      return beat;
+    });
+
+    const scene = Scene.create({
+      id: `scene_${sequenceOrder}_${Date.now()}`,
+      sequenceOrder,
+      durationMs,
+      transition,
+      beats,
+    });
+
     exp.appendScene(scene);
   }
 
@@ -46,7 +78,7 @@ export class LocalExperienceService {
 
     exp.publish();
 
-    const textBeats = exp.scenes.flatMap((s) => s.beats);
+    const textBeats = exp.scenes.flatMap((s) => s.beats.map((b) => b.content));
     const presentation = await this.orchestrator.execute({
       experienceId: exp.id,
       senderId: exp.senderId,
