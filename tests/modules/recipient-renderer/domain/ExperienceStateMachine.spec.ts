@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { ExperienceStateMachine } from '@/modules/recipient-renderer/domain/ExperienceStateMachine';
+import { ExperienceStateMachine } from '../../../../src/modules/recipient-renderer/domain/ExperienceStateMachine';
 
 describe('ExperienceStateMachine', () => {
   let stateMachine: ExperienceStateMachine;

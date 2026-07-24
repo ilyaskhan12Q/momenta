@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, use } from 'react';
+import { useRef, use } from 'react';
 import {
   CinematicExperienceProvider,
   useCinematicExperience,
