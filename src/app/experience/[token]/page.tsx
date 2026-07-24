@@ -6,6 +6,8 @@ import { ExperienceSplash } from '@/modules/recipient-renderer/presentation/comp
 import { ShaderBackgroundCanvas } from '@/modules/recipient-renderer/infrastructure/webgl/ShaderBackgroundCanvas';
 import { AudioSoundscapeEngine } from '@/modules/recipient-renderer/infrastructure/audio/AudioSoundscapeEngine';
 import { SceneTimelineViewer } from '@/modules/recipient-renderer/presentation/components/SceneTimelineViewer';
+import { ExperienceOutro } from '@/modules/recipient-renderer/presentation/components/ExperienceOutro';
+import { getRelationshipTheme } from '@/modules/recipient-renderer/domain/relationship-presets';
 
 export type RecipientPlaybackState = 'LOADING' | 'UNOPENED' | 'PLAYING' | 'COMPLETED' | 'ERROR';
 
@@ -49,13 +51,32 @@ export default function ExperiencePage({ params }: { params: Promise<{ token: st
     });
   }, [params]);
 
+  const theme = manifest ? getRelationshipTheme(manifest.relationship, manifest.presentation.colors, manifest.presentation.typography) : null;
+
+  const handleGestureProgress = (progress: number) => {
+    if (audioEngineRef.current) {
+      audioEngineRef.current.triggerGestureProgress(progress);
+    }
+  };
+
   const handleOpenExperience = (audioCtx: AudioContext) => {
-    if (!manifest) return;
+    if (!manifest || !theme) return;
     const engine = new AudioSoundscapeEngine();
-    engine.initialize(audioCtx, manifest.presentation.audio);
+    engine.initialize(audioCtx, {
+      ...manifest.presentation.audio,
+      frequencies: theme.audio.frequencies,
+      scaleName: theme.audio.scaleName,
+      waveform: theme.audio.waveform,
+    });
     engine.start();
     audioEngineRef.current = engine;
     setState('PLAYING');
+  };
+
+  const handleAdvanceScene = () => {
+    if (audioEngineRef.current) {
+      audioEngineRef.current.playChime();
+    }
   };
 
   const handleTimelineComplete = () => {
@@ -65,68 +86,81 @@ export default function ExperiencePage({ params }: { params: Promise<{ token: st
     setState('COMPLETED');
   };
 
+  const handleSendHeart = () => {
+    if (audioEngineRef.current) {
+      audioEngineRef.current.playHeartSwell();
+    }
+  };
+
+  const handleReplay = () => {
+    setState('UNOPENED');
+  };
+
   if (state === 'LOADING') {
     return (
-      <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', background: '#0a0d14' }}>
-        <p>Opening Momenta Experience...</p>
+      <div
+        style={{
+          minHeight: '100vh',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: '#fff',
+          background: '#090d16',
+          fontFamily: "'Plus Jakarta Sans', sans-serif",
+          letterSpacing: '0.05em',
+        }}
+      >
+        <div style={{ width: '40px', height: '40px', borderRadius: '50%', border: '3px solid rgba(255,255,255,0.1)', borderTopColor: '#6366f1', animation: 'spin 1s linear infinite' }} />
+        <p style={{ marginTop: '20px', fontSize: '14px', color: '#94a3b8' }}>Preparing your Momenta experience...</p>
+        <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       </div>
     );
   }
 
-  if (state === 'ERROR' || !manifest) {
+  if (state === 'ERROR' || !manifest || !theme) {
     return (
-      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#fff', background: '#0a0d14', textAlign: 'center', padding: '24px' }}>
+      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#fff', background: '#090d16', textAlign: 'center', padding: '24px' }}>
         <h2>Experience Unavailable</h2>
-        <p style={{ color: '#94a3b8' }}>{errorMsg || 'This experience link may be invalid, deleted, or expired.'}</p>
+        <p style={{ color: '#94a3b8', maxWidth: '400px', marginTop: '12px' }}>{errorMsg || 'This experience link may be invalid, deleted, or expired.'}</p>
       </div>
     );
   }
 
   return (
-    <div style={{ position: 'relative', minHeight: '100vh', background: manifest.presentation.colors.background, overflow: 'hidden' }}>
+    <div style={{ position: 'relative', minHeight: '100vh', background: theme.colors.background, overflow: 'hidden' }}>
+      {/* Background WebGL Shader Canvas & Particle Overlay */}
       <ShaderBackgroundCanvas
-        shader={manifest.presentation.shader}
-        colors={manifest.presentation.colors}
+        shader={theme.shader}
+        colors={theme.colors}
+        particleType={theme.particles.type}
         reducedMotion={manifest.presentation.animation.reducedMotionFallback}
       />
 
       {state === 'UNOPENED' && (
-        <ExperienceSplash manifest={manifest} onOpen={handleOpenExperience} />
+        <ExperienceSplash
+          manifest={manifest}
+          onOpen={handleOpenExperience}
+          onGestureProgress={handleGestureProgress}
+        />
       )}
 
       {state === 'PLAYING' && (
         <SceneTimelineViewer
           scenes={manifest.scenes}
           presentation={manifest.presentation}
+          relationship={manifest.relationship}
+          onAdvanceScene={handleAdvanceScene}
           onComplete={handleTimelineComplete}
         />
       )}
 
       {state === 'COMPLETED' && (
-        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: manifest.presentation.colors.primaryText, textAlign: 'center', padding: '24px' }}>
-          <div style={{ background: manifest.presentation.colors.surfaceGlass, border: `1px solid ${manifest.presentation.colors.borderGlass}`, backdropFilter: 'blur(20px)', borderRadius: '24px', padding: '40px', maxWidth: '480px', width: '100%' }}>
-            <h2 style={{ fontFamily: manifest.presentation.typography.headerFontFamily, fontSize: '28px', marginBottom: '16px' }}>
-              The End
-            </h2>
-            <p style={{ color: manifest.presentation.colors.secondaryText, marginBottom: '24px' }}>
-              Thank you for sharing in this Momenta experience from {manifest.senderDisplayName}.
-            </p>
-            <button
-              onClick={() => setState('PLAYING')}
-              style={{
-                background: manifest.presentation.colors.accentGlow,
-                border: 'none',
-                color: '#fff',
-                padding: '12px 24px',
-                borderRadius: '12px',
-                cursor: 'pointer',
-                fontWeight: 600,
-              }}
-            >
-              Replay Experience
-            </button>
-          </div>
-        </div>
+        <ExperienceOutro
+          manifest={manifest}
+          onReplay={handleReplay}
+          onSendHeart={handleSendHeart}
+        />
       )}
     </div>
   );
