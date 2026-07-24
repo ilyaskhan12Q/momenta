@@ -60,7 +60,7 @@ stateDiagram-v2
 ### State Definitions
 - **`LOADING`**: Fetches manifest by `token`, initializes WebGL background context, pre-renders soundscape oscillators.
 - **`UNOPENED`**: Displays splash screen with customized relationship prelude and tactile gesture prompt (`Wax Seal`, `Satin Ribbon`, `Memory Candle`, etc.).
-- **`UNLOCKING`**: Tracks real-time physics progress ($0 \to 100\%$) during tactile interaction with real-time acoustic pitch modulation.
+- **`UNLOCKING`**: Tracks real-time physics progress (0 to 100%) during tactile interaction with real-time acoustic pitch modulation.
 - **`PLAYING`**: Auto-advancing cinematic scene timeline with 3D parallax tilt, dynamic kinetic typography, and audio soundscape.
 - **`PAUSED`**: Halts scene countdown timer, freezes camera movement, dims screen slightly.
 - **`COMPLETED`**: Displays memory keepsake summary card, emotional reaction button ("Send Warmth"), and replay trigger.
@@ -85,12 +85,11 @@ Momenta tailors visual atmosphere, sound frequency, and unlock gesture based on 
 ## 5. Interaction & Camera Movement Plan
 
 1. **Camera Parallax**:
-   - Cursor / Motion Vector $(x, y) \in [-1, 1]$ mapped to card 3D tilt:
-     $$\text{rotateX} = -y \times 12^\circ, \quad \text{rotateY} = x \times 12^\circ$$
-   - Smooth dampening via GSAP `quickTo` with factor $\tau = 0.15$.
+   - Cursor / Motion Vector (x, y) in [-1, 1] mapped to card 3D tilt: `rotateX = -y * 12°`, `rotateY = x * 12°`.
+   - Smooth dampening via GSAP `quickTo` with factor tau = 0.15.
 2. **Kinetic Typography Stagger**:
-   - Each word fades in with $y$-translation from $+15\text{px} \to 0\text{px}$ and opacity $0 \to 1$.
-   - Inter-word delay: $140\text{ms}$ with extended $300\text{ms}$ delay for punctuation (`.`, `,`, `!`, `?`).
+   - Each word fades in with y-translation from +15px to 0px and opacity 0 to 1.
+   - Inter-word delay: 140ms with extended 300ms delay for punctuation (`.`, `,`, `!`, `?`).
 3. **Gesture Physics**:
    - **`WaxSeal`**: 1.2 second continuous press with radial pressure ring expansion, vibration haptics (where available), and golden wax fracture animation.
    - **`SatinRibbon`**: Horizontal drag vector exceeding 80% screen width to unbind ribbon node.
