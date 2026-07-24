@@ -124,6 +124,8 @@ function ExperiencePageContent() {
       <ShaderBackgroundCanvas
         shader={theme.shader}
         colors={theme.colors}
+        relationshipType={manifest.relationship}
+        currentState={context.state}
         particleType={theme.particles.type}
         reducedMotion={manifest.presentation.animation.reducedMotionFallback}
       />
