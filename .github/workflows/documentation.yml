@@ -35,7 +35,7 @@ jobs:
         run: npm run typecheck
 
       - name: Build Docusaurus Static Site
-        run: npm run build
+        run: npm run build:docs
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
