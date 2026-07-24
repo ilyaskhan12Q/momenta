@@ -14,8 +14,12 @@ export class LocalExperienceService {
   private compiler = new StoryManifestCompiler();
 
   createDraft(senderId: string, title: string, relationshipStr: string, occasionStr: string): string {
-    const relationship = RelationshipIntent.create(relationshipStr).value;
-    const occasion = OccasionType.create(occasionStr).value;
+    const relRes = RelationshipIntent.create(relationshipStr);
+    const relationship = relRes.isSuccess ? relRes.value : RelationshipIntent.create('OTHER').value;
+
+    const occRes = OccasionType.create(occasionStr);
+    const occasion = occRes.isSuccess ? occRes.value : OccasionType.create('JUST_BECAUSE').value;
+
 
     const exp = Experience.createDraft({
       senderId,

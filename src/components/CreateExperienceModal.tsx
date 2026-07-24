@@ -176,11 +176,11 @@ export const CreateExperienceModal: React.FC<CreateExperienceModalProps> = ({
                   style={{ width: '100%', padding: '12px', borderRadius: '10px', background: '#1e293b', border: '1px solid #334155', color: '#fff' }}
                 >
                   <option value="PARTNER">Partner</option>
-                  <option value="FRIEND">Friend</option>
+                  <option value="BEST_FRIEND">Friend / Best Friend</option>
                   <option value="PARENT">Parent</option>
                   <option value="SIBLING">Sibling</option>
-                  <option value="TEACHER">Teacher</option>
-                  <option value="COLLEAGUE">Colleague</option>
+                  <option value="MENTOR">Teacher / Mentor</option>
+                  <option value="OTHER">Colleague / Other</option>
                 </select>
               </div>
 
@@ -194,9 +194,11 @@ export const CreateExperienceModal: React.FC<CreateExperienceModalProps> = ({
                   <option value="ANNIVERSARY">Anniversary</option>
                   <option value="BIRTHDAY">Birthday</option>
                   <option value="APOLOGY">Apology</option>
-                  <option value="GRATITUDE">Gratitude</option>
-                  <option value="JUST_BECAUSE">Just Because</option>
+                  <option value="JUST_BECAUSE">Gratitude / Just Because</option>
+                  <option value="VALENTINE">Valentine</option>
+                  <option value="CONDOLENCE">Condolence</option>
                 </select>
+
               </div>
             </div>
 

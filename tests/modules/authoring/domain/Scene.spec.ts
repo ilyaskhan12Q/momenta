@@ -32,6 +32,14 @@ describe('Authoring Domain — Timeline Scenes & Value Objects', () => {
     expect(relRes.isSuccess).toBe(true);
     expect(relRes.value.value).toBe('PARTNER');
 
+    const friendRes = RelationshipIntent.create('FRIEND');
+    expect(friendRes.isSuccess).toBe(true);
+    expect(friendRes.value.value).toBe('BEST_FRIEND');
+
+    const teacherRes = RelationshipIntent.create('teacher');
+    expect(teacherRes.isSuccess).toBe(true);
+    expect(teacherRes.value.value).toBe('MENTOR');
+
     const invalidRes = RelationshipIntent.create('INVALID_RELATION' as any);
     expect(invalidRes.isFailure).toBe(true);
     expect(invalidRes.error.message).toContain('Invalid relationship category');
@@ -42,9 +50,14 @@ describe('Authoring Domain — Timeline Scenes & Value Objects', () => {
     expect(occRes.isSuccess).toBe(true);
     expect(occRes.value.value).toBe('ANNIVERSARY');
 
+    const gratitudeRes = OccasionType.create('GRATITUDE');
+    expect(gratitudeRes.isSuccess).toBe(true);
+    expect(gratitudeRes.value.value).toBe('JUST_BECAUSE');
+
     const invalidRes = OccasionType.create('INVALID_OCCASION' as any);
     expect(invalidRes.isFailure).toBe(true);
   });
+
 
   it('should create interaction gesture defaults and link tokens', () => {
     const gesture = InteractionGesture.create('WAX_SEAL');
