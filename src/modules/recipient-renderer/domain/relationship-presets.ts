@@ -79,6 +79,7 @@ export function getRelationshipTheme(
       gesture: {
         gestureType: 'SATIN_RIBBON',
         type: 'SATIN_RIBBON',
+        icon: '🎀',
         triggerPromptText: 'Slide to untie the velvet ribbon',
         instructions: 'Gently slide across to open your letter',
         completionFeedbackStyle: 'ELEGANT_SWEEP',
@@ -139,6 +140,7 @@ export function getRelationshipTheme(
       gesture: {
         gestureType: 'WAX_SEAL',
         type: 'WAX_SEAL',
+        icon: '🏷️',
         triggerPromptText: 'Press & hold to break the golden seal',
         instructions: 'Hold your finger steady to release the memory',
         completionFeedbackStyle: 'GOLDEN_BURST',
@@ -199,6 +201,7 @@ export function getRelationshipTheme(
       gesture: {
         gestureType: 'HERITAGE_LOCKET',
         type: 'HERITAGE_LOCKET',
+        icon: '🔑',
         triggerPromptText: 'Hold key emblem to unlock memory box',
         instructions: 'Touch & hold to open the keepsake chest',
         completionFeedbackStyle: 'SILVER_SHIMMER',
@@ -259,6 +262,7 @@ export function getRelationshipTheme(
       gesture: {
         gestureType: 'MEMORY_CANDLE',
         type: 'MEMORY_CANDLE',
+        icon: '🕯️',
         triggerPromptText: 'Hold to ignite the memory flame',
         instructions: 'Touch & hold the match to kindle the spark',
         completionFeedbackStyle: 'CELESTIAL_SPARKLE',
@@ -319,6 +323,7 @@ export function getRelationshipTheme(
       gesture: {
         gestureType: 'UNFOLD_PARCHMENT',
         type: 'UNFOLD_PARCHMENT',
+        icon: '✉️',
         triggerPromptText: 'Tap to unfold the keepsakes',
         instructions: 'Touch the glowing corners to open',
         completionFeedbackStyle: 'BLOOM_BURST',
@@ -379,6 +384,7 @@ export function getRelationshipTheme(
       gesture: {
         gestureType: 'WAX_SEAL',
         type: 'WAX_SEAL',
+        icon: '🏷️',
         triggerPromptText: 'Press & hold to break the emerald seal',
         instructions: 'Hold your thumb to break the emblem seal',
         completionFeedbackStyle: 'EMERALD_GLOW',
@@ -439,6 +445,7 @@ export function getRelationshipTheme(
       gesture: {
         gestureType: 'MEMORY_CANDLE',
         type: 'MEMORY_CANDLE',
+        icon: '🕯️',
         triggerPromptText: 'Hold to light up the memory star',
         instructions: 'Touch & hold to ignite the magical spark',
         completionFeedbackStyle: 'MAGIC_SPARKLE',
@@ -499,6 +506,7 @@ export function getRelationshipTheme(
       gesture: {
         gestureType: 'HERITAGE_LOCKET',
         type: 'HERITAGE_LOCKET',
+        icon: '🔑',
         triggerPromptText: 'Hold to open the vintage locket',
         instructions: 'Touch & hold to open the keepsake locket',
         completionFeedbackStyle: 'GOLDEN_GLOW',
@@ -558,6 +566,7 @@ export function getRelationshipTheme(
     gesture: {
       gestureType: 'WAX_SEAL',
       type: 'WAX_SEAL',
+      icon: '🏷️',
       triggerPromptText: 'Press & hold to break seal',
       instructions: 'Hold finger on the seal to reveal your story',
       completionFeedbackStyle: 'STARLIGHT_BURST',

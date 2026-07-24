@@ -41,7 +41,7 @@ export async function POST(request: NextRequest | Request, context: { params: Pr
     return NextResponse.json(
       {
         data: manifest,
-        accessToken: manifest.accessToken,
+        accessToken: manifest.linkToken,
       },
       { status: 200 }
     );
